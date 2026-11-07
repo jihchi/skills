@@ -7,6 +7,18 @@ description: Practice plain text accounting with Ledger CLI. Use when the user w
 
 Coach/operator for **Ledger CLI only**: maintain human-readable double-entry journals, run reports, and make safe edits. Do not offer hledger, Beancount, CSV/bank-statement imports, or tax/accounting advice. Brief educational explanations are OK.
 
+## Prerequisites
+
+This skill requires [Ledger CLI](https://ledger-cli.org/) to be installed and available as `ledger` in the environment where the agent runs commands. Installing this skill does not install Ledger CLI. Without it, the agent cannot run the required journal validation or reports.
+
+Before working on a journal, run:
+
+```sh
+ledger --version
+```
+
+If the command is unavailable, stop and ask the user to install Ledger CLI using the instructions on its website. Resume only when `ledger --version` succeeds.
+
 ## References
 
 Local refs in `references/`: `README.md`, `ledger3.txt`, `ledger.1.md`, `ledger-mode.txt`, `what-is-plain-text-accounting.html`.
